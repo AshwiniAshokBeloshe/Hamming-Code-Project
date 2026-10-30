@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hamming Code Project</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+          href="https://pyscript.net/releases/2024.1.1/core.css">
+
+    <script type="module"
+            src="https://pyscript.net/releases/2024.1.1/core.js">
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Hamming Code</h1>
+            <p>Error Detection and Correction System</p>
+            <p>Computer Network Mini Project</p>
+        </header>
+
+        <section class="card">
+            <h2>Enter Binary Data</h2>
+
+            <label for="data">Original Data (4 bits)</label>
+            <input type="text" id="data"
+                   placeholder="Example: 1011"
+                   maxlength="4">
+
+            <label for="error_pos">
+                Simulate Transmission Error
+            </label>
+
+            <select id="error_pos">
+                <option value="0">No Error</option>
+                <option value="1">Bit Position 1</option>
+                <option value="2">Bit Position 2</option>
+                <option value="3">Bit Position 3</option>
+                <option value="4">Bit Position 4</option>
+                <option value="5">Bit Position 5</option>
+                <option value="6">Bit Position 6</option>
+                <option value="7">Bit Position 7</option>
+            </select>
+
+            <button py-click="process_data">
+                Generate & Correct Code
+            </button>
+        </section>
+
+        <section class="card">
+            <h2>Results</h2>
+            <div id="output" class="result">
+                Your result will appear here.
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>About Hamming Code</h2>
+            <p>
+                Hamming Code is an error-control technique
+                used in digital communication. It adds parity
+                bits to identify and correct single-bit errors.
+            </p>
+        </section>
+
+        <footer>
+            Hamming Code | Computer Networks Project
+        </footer>
+
+    </div>
+
+    <script type="py" src="./main.py"></script>
+
+</body>
+</html>
